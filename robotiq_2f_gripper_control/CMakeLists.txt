@@ -61,6 +61,5 @@ add_dependencies(robotiq_2f_gripper_ethercat_node robotiq_2f_gripper_control_gen
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/groovy/api/catkin/html/adv_user_guide/variables.html
 
-install(PROGRAMS nodes/Robotiq2FGripperSimpleController.py nodes/Robotiq2FGripperStatusListener.py
-    nodes/Robotiq2FGripperTcpNode.py nodes/Robotiq2FGripperRtuNode.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
+catkin_install_python(PROGRAMS nodes/Robotiq2FGripperSimpleController.py nodes/Robotiq2FGripperStatusListener.py nodes/Robotiq2FGripperTcpNode.py nodes/Robotiq2FGripperRtuNode.py
+        DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
